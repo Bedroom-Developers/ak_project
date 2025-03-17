@@ -39,6 +39,7 @@ AUTH_USER_MODEL = "ak_rest.CustomUser"
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = ["DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT"]
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=5000),
