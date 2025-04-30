@@ -71,7 +71,6 @@ def predict_completion_date(request_id):
         return {"error": "Заказ не найден."}
 
     df = pd.DataFrame([request_data])
-    df['created_at'] = datetime.now().timestamp()
 
     # One-hot encoding
     df = pd.get_dummies(df, columns=['window_type'], drop_first=True)
