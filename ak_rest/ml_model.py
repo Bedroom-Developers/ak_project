@@ -24,8 +24,8 @@ def train_model():
         return "Недостаточно данных для обучения."
 
     # Преобразуем даты в числовой формат
-    df['created_at'] = pd.to_datetime(df['created_at'])
-    df['measurement_date'] = pd.to_datetime(df['measurement_date'])
+    df['created_at'] = pd.to_datetime(df['created_at']).dt.tz_localize(None)
+    df['measurement_date'] = pd.to_datetime(df['measurement_date']).dt.tz_localize(None)
     
     # Целевая переменная — разница между датой замера и датой создания заказа
     df['days_to_complete'] = (df['measurement_date'] - df['created_at']).dt.days
