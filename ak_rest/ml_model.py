@@ -64,7 +64,7 @@ def predict_completion_date(request_id):
 
     # Достаем данные по конкретному заказу
     request_data = Requests.objects.filter(id=request_id).values(
-        'width', 'height', 'window_type', 'price', 'created_at'
+        'width', 'height', 'window_type', 'price'
     ).first()
 
     if not request_data:
