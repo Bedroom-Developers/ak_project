@@ -37,7 +37,7 @@ def train_model():
     df = pd.get_dummies(df, columns=['window_type'], drop_first=True)
 
     # Формируем данные для модели
-    X = df.drop(columns=['id', 'measurement_date', 'days_to_complete'])
+    X = df.drop(columns=['id', 'measurement_date', 'days_to_complete', 'created_at'])
     y = df['days_to_complete']
 
     # Разделяем на train/test
