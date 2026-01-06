@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv("SECRET_KEY", "fallback-secret-key")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "back.alka.ispark.kz"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "alkaapi.ispark.kz"]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -39,7 +39,7 @@ AUTH_USER_MODEL = "ak_rest.CustomUser"
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_METHODS = ["DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT"]
-CSRF_TRUSTED_ORIGINS = ["https://back.alka.ispark.kz"]
+CSRF_TRUSTED_ORIGINS = ["https://alkaapi.ispark.kz"]
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 SIMPLE_JWT = {
